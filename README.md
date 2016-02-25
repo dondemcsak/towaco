@@ -80,6 +80,28 @@ Because the Azure Resource Manager mode is not enabled by default, you must use 
 azure config mode arm
 ```
 
+### Creating a Resource Group
+
+Now that you are set to ARM mode, we need to create a Resource Group as a place to deploy your resources.
+
+A resource group is a logical grouping of network, storage, and other resources. Almost all commands in the Azure Resource Manager mode need a resource group. You can create a resource group named TowacoRG, for example, by using the following command.
+
+```
+azure group create -n "TowacoRG" -l "East US"
+```
+Where "East US" is the Azure Data Center location.
+
+### Deploying a WordPress web site backed by MySQL master-slave replication
+
+This template deploys a WordPress site in Azure backed by MySQL replication with one master and one slave servers. It has the following capabilities:
+
++ Installs and configures GTID based MySQL replication on CentOS 6.
++ Deploys a load balancer in front of the 2 MySQL VMs. MySQL, SSH, and MySQL probe ports are exposed through the load balancer using Network Security Group rules. WordPress accesses MySQL through the load balancer.
++ Configures a http based health probe for each MySQL instance that can be used to monitor MySQL health.
++ WordPress deployment starts immediately after MySQL deployment finishes. Details about MySQL management, including failover, can be found [here](https://github.com/azure/azure-quickstart-templates/tree/master/mysql-replication).
+
+
+
 References
 + [Install the Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/)
 + [Using the Azure CLI for Mac with Azure Resource Manager]( https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-azure-resource-manager/)
