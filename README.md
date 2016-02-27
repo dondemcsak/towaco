@@ -91,15 +91,7 @@ azure group create -n "TowacoRG" -l "East US"
 ```
 Where "East US" is the Azure Data Center location.
 
-### Deploying a WordPress web site backed by MySQL master-slave replication
-
-This template deploys a WordPress site in Azure backed by MySQL replication with one master and one slave servers. It has the following capabilities:
-
-+ Installs and configures GTID based MySQL replication on CentOS 6.
-+ Deploys a load balancer in front of the 2 MySQL VMs. MySQL, SSH, and MySQL probe ports are exposed through the load balancer using Network Security Group rules. WordPress accesses MySQL through the load balancer.
-+ Configures a http based health probe for each MySQL instance that can be used to monitor MySQL health.
-+ WordPress deployment starts immediately after MySQL deployment finishes. Details about MySQL management, including failover, can be found [here](https://github.com/azure/azure-quickstart-templates/tree/master/mysql-replication).
-
+### Deploying a Jenkins Server
 
 
 References
