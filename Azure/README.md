@@ -29,7 +29,7 @@ Azure help
 ```
 
 # Next Steps
-[Connecting to an Azure Subscription] (../Bootstrap/README.md)
+[Connecting to an Azure Subscription] (Bootstrap/README.md)
 
 References
 + [Install the Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/)

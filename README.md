@@ -10,8 +10,8 @@ The intent of this project is to get up and running using Infrastructure as Code
 
 ## Azure
 
-+ [Install the Azure CLI](../Azure/README.md)
-+ [Configure the Azure CLI](../Azure/Bootstrap/README.md)
++ [Install the Azure CLI](Azure/README.md)
++ [Configure the Azure CLI](Azure/Bootstrap/README.md)
 
 
 ### Deploying a Jenkins Server
