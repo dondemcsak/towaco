@@ -80,6 +80,20 @@ Because the Azure Resource Manager mode is not enabled by default, you must use 
 azure config mode arm
 ```
 
+### Creating a Resource Group
+
+Now that you are set to ARM mode, we need to create a Resource Group as a place to deploy your resources.
+
+A resource group is a logical grouping of network, storage, and other resources. Almost all commands in the Azure Resource Manager mode need a resource group. You can create a resource group named TowacoRG, for example, by using the following command.
+
+```
+azure group create -n "TowacoRG" -l "East US"
+```
+Where "East US" is the Azure Data Center location.
+
+### Deploying a Jenkins Server
+
+
 References
 + [Install the Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/)
 + [Using the Azure CLI for Mac with Azure Resource Manager]( https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-azure-resource-manager/)
